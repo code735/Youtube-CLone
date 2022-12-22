@@ -125,3 +125,9 @@ let saveAndRedirect = (ele) => {
     localStorage.setItem("videoPage", JSON.stringify(ele));
     window.location.href = "videoPage.html";
 }
+
+// closing video suggestions onclik body
+document.querySelector("body").addEventListener("click", function () {
+    document.getElementById("video_suggestion_list").textContent = "";
+    document.getElementById("video_suggestion_list").style.display = "none";
+})
